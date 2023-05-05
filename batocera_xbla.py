@@ -45,8 +45,28 @@ for archive in os.listdir(xbla_dir):
         for subdir, dirs, files in os.walk(xbla_unpacked_dir):
             for file in files:
                 src = file
-                dst = file.replace(".pirs", ".xbox360")
+                dst = file.replace(".pirs", "")
                 os.rename(os.path.join(xbla_unpacked_dir, src), (os.path.join(xbla_unpacked_dir, dst)))
+
+
+# Define a function to create a text file named after each file in the XBLA_Unpacked folder, with the extension .xbox360, and inside that .xbox360 text file list the original file name without the extension.
+def create_xbox360_text_file(file_name):
+    # Create a text file with the same name as the file, with the extension .xbox360
+    with open(os.path.join(xbla_unpacked_dir, file_name + ".xbox360"), "w") as f:
+        # Write the original file name without the extension to the text file
+        f.write(file_name)
+
+
+# Iterate over all of the files in the XBLA_Unpacked folder
+for file in os.listdir(xbla_unpacked_dir):
+    # If the file is not a directory
+    if not os.path.isdir(os.path.join(xbla_unpacked_dir, file)):
+        # Create a text file for the file
+        create_xbox360_text_file(file)
+
+
+
+
             
 
 # Print a message to let the user know that the operation was successful
