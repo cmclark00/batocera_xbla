@@ -1,4 +1,4 @@
-# XBLA-Automation 1.1
+# XBLA-Automation 1.2
 
 ## Purpose:
 ### The purpose of this script is to extract, move, and organize all of your XBLA game archives for easy integration into EmulationStation in Batocera Linux
@@ -21,7 +21,7 @@ Make sure you have some kind of unarchiving program that can handle Rar files.
 
 Instructions for use:
 
-In the command line install patool using "pip install patool".
+In the command line install patool using "pip install patool", as well as alive_progress with "pip install alive_progress".
 
 Download the zipped project file and extract all of its contents to your home directory.
 In Windows this is usually C:\Users\username.
