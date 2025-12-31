@@ -4,7 +4,7 @@
 ### The purpose of this script is to extract, move, and organize all of your XBLA game archives for easy integration into EmulationStation in Batocera Linux
 
 ## Why it's necessary:
-### The way that Xbox Live Arcade games were packaged was kind of weird. They were stored in a pirs container, which is like a weird archive format that only the xbox 360 used. In the past EmulationStation couldn't see these files because they dont actually have a file extension. Nopw we can trick it into seeing these files using a .xbox360 text file.
+### The way that Xbox Live Arcade games were packaged was kind of weird. They were stored in a pirs container, which is like a weird archive format that only the xbox 360 used. In the past EmulationStation couldn't see these files because they dont actually have a file extension. Now we can trick it into seeing these files using a .xbox360 text file.
 
 ## How it works:
 ### The way the script works is by calling the patoolib module to extract the archives from the input folder you choose to the output folder you choose.
